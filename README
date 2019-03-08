@@ -1,0 +1,42 @@
+William Wood cssc1167, Nadim Tahmass cssc1158	
+CS570, Summer 2018
+Assignment #2, File Editor
+README file
+
+All files are in the cssc1167 a2 directory and uploaded to blackboard through William Wood.
+
+Files Included: alphWords.c, copyFile.c, displayDirectory.c, main.c, makeDirectory.c, organizedFiles.c, readFiles.c, 
+					writeFiles.c, fileEditor.h, makefile, README.
+
+Compile instructions: use makefile by using make command or gcc -pthread -o player threadPlayer.c main.c -I.
+	gcc -o filem alphWords.c copyFile.c displayDirectory.c main.c makeDirectory.c organizedFiles.c readFiles.c writeFiles.c -std=gnu99 -I.
+
+Operating Instructions: Run using ./filem , no additional command line arguments 
+							Follow prompts accordingly
+
+Significant design decisions: Used scanf for many things but for writing used fgets to ensure spaces
+								and new lines were inserted into files. Split the program into many
+								parts to easily find problems when programming. This program can't
+								handle giant files unless you change the projectWordCount parameter to
+								a bigger number which will increase the amount of words that can be placed.
+								We couldn't find a way to easily implement a resizing array.
+
+Extra features/algorithms/functionality: No extra features/algorithms/functionality were created or used.
+
+Known Deficiencies or bugs: When you enter write you can type whatever file you want, but it won't fail
+							till you finish all the prompts. Only known bug currently
+							
+							A major deficiency is you have to change the defined projected word count
+							in the header file if you want to have a file that has more than 2000 words
+							in it as we couldn't find a way to implement an arraylist quick enough by the
+							time we realized this would be a problem.
+
+Lessons Learned: Learned to use fork statements as well as use many different system calls
+				 to get information on files. System calls also are helpful with file management
+				 for a program. Hardest lesson learned was discovering figuring out what a child
+				 process was up to as it can be hard to track them at first. 
+
+Who Worked on What: William wrote most of the code since it was easier for us to follow.
+					All of the writing was done when we met up to work on the assignment.
+					We both met up to figure out solutions and proactively worked on the
+					assignment.
